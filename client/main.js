@@ -16,6 +16,9 @@ function signUp(){
     //DOM manupilation
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const phone_no = document.getElementById("phone_no").value;
+    const licence_no = document.getElementById("licence_no").value;
+    const address = document.getElementById("address").value;    
     console.log(email, password)
     // firebase code
     firebase.auth().createUserWithEmailAndPassword(email, password)
