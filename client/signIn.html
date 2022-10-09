@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script> -->
   </head>
   <body>
     <div class="form">
       <!-- Email  -->
       <div class="email">
-        <label for="email">Email</label>
+        <label for="username">username</label>
         <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Write your email"
+          type="username"
+          name="username"
+          id="username"
+          placeholder="Write your username"
         />
       </div>
       <!-- passWord -->
@@ -34,10 +36,10 @@
       </div>
 
       <!-- Sign Up button -->
-      <button id="submit-btn" onclick="signIn()">Sign In</button>
+      <button id="submit-btn" onclick="signIn();">Sign In</button>
             <!-- Sign In option -->
       <p>Dont have an account ?</p>
-      <span>Sign Up<a href="Login.html"> <u><b>HERE</b></u></a></span>
+      <span>Sign Up<a href="signup.html"> <u><b>HERE</b></u></a></span>
     </div>
     <script src="main.js"></script>
   </body>

@@ -5,121 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>    
     <link rel="stylesheet" href="style.css" />
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />    
-
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script> -->
+    <script src="/js/axios/dist/axios.min.js"></script>
   </head>
   <body>
-   
- <!-- loginModal -->
-    <div
-      class="container container-fluid"
-      id="signupModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-          <div class="modal-body p-0">
-            <div class="container-fluid">
-              <div class="row gy-4">
-                <div
-                  class="col-lg-4 col-sm-12 bg-cover"
-                  style="background-image: url(img/mec2.jpg); min-height: 300px"
-                >
-                  <div></div>
-                </div>
-                <div class="col-lg-8">
-                  <form class="p-lg-5 col-12 row g-3 form">
-                    <div>
-                      <h1>Create a free account</h1>
-                      <p>
-                        Sign Up with your email and password.<br />
-                        
-                      </p>
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="email" class="form-label"> Email:</label>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="example@gmail.com"
-                        id="email"
-                        aria-describedby="emailHelp"
-                      />
-                    </div>
-                    <div class="col-6">
-                      <label for="password" class="form-label"
-                        >Password</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="password"
-                        aria-describedby="emailHelp"
-                      />
-                    </div>
-                    <!-- licence_no -->
-                    <div class="pass">
-                      <label for="licence_no">Licence Number</label>
-                      <input
-                        name="licence_no"
-                        id="licence_no"
-                        placeholder="1235478"
-                      />
-                    </div>
-                    
-                    <!-- phone_no -->
-                    <div class="pass">
-                      <label for="phone_no">Phone number</label>
-                      <input
-                        name="phone_no"
-                        id="phone_no"
-                        placeholder="+254 712458963"
-                      />
-                    </div>      
-
-                    <!-- address -->
-                    <div class="pass">
-                      <label for="address">Address</label>
-                      <input
-                        type="address"
-                        name="address"
-                        id="address"
-                        placeholder="Thika"
-                      />
-                    </div>                                         
-                    <div class="col-12">
-                      <button
-                        id="submit-btn"
-                        onclick="signUp()"
-                        type="submit"
-                        >
-                        Sign Up
-                      </button>
-                    </div>
-                    <div class="col-12">
-                      Already have an account? Log in below
-                        <a href="signIn.html"><h4>Login</h4></a>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="form">
+      <!-- username  -->
+      <div class="username">
+        <label for="username">username</label>
+        <input
+          type="username"
+          name="username"
+          id="username"
+          placeholder="Write your username"
+        />
       </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>    
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/app.js"></script>      
+      <!-- Email  -->
+      <div class="email">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Write your email"
+        />
+      </div>
+      <!-- passWord -->
+      <div class="pass">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+      </div>
+      <!-- licence_no -->
+      <div class="pass">
+        <label for="licence_no">Licence Number</label>
+        <input
+          name="licence_no"
+          id="licence_no"
+          placeholder="1235478"
+        />
+      </div>
+      
+      <!-- phone -->
+      <div class="pass">
+        <label for="phone">Phone number</label>
+        <input
+          name="phone"
+          id="phone"
+          placeholder="+254 712458963"
+        />
+      </div>      
+
+      <!-- address -->
+      <div class="pass">
+        <label for="address">Address</label>
+        <input
+          type="address"
+          name="address"
+          id="address"
+          placeholder="Thika"
+        />
+      </div> 
+      <!-- Rails button -->
+      <!-- <button id="submit-btn" onclick="rails()">Rails test</button> -->
+      <!-- Sign Up button -->
+      <button id="submit-btn" onclick="signUp();">Sign Up</button>
+      <!-- Sign In option -->
+      <p>Already have an account ?</p>
+      <span><a href="signIn.html">Sign In</a></span>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
